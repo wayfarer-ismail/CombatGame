@@ -70,4 +70,14 @@ public class Being {
             this.weight = 0;
         }
     }
+
+
+    public int addItem(Usable item) {
+        if (getInventory().size() <= 10) {
+            getInventory().add(item);
+            return 0;
+        } else {
+            return -1;
+        }
+    }
 }
